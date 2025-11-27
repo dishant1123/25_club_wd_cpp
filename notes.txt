@@ -1,0 +1,29 @@
+c language : procedure 
+
+c++ languges : oops 
+
+==========
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    printf(); 
+    getch(); 
+}
+
+#include<iostream>   ===> cout , cin 
+int main()
+{
+   std :: cout<<"hello world";
+   std :: cout<<"pratham"; 
+    return 0; 
+}
+
+#include<iostream>   ===> cout , cin 
+using  namespace std; 
+int main()
+{
+   cout<<"hello world";
+   cout<<"pratham"; 
+    return 0; 
+}
