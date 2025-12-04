@@ -40,8 +40,14 @@ class student
 {
     public : 
         int rollno=1;  // rollno  name  ==> class data member  ==> public 
-        string name="mahek"; 
-
+        string name="raj"; 
+    // void input()
+    // {
+    //     cout<<"enter rollno :";
+    //     cin>>rollno; 
+    //     cout<<"enter name :";
+    //     cin>>name;
+    // }
     void display()
     {
         cout<<"rollno is :"<<rollno<<endl;
@@ -54,7 +60,22 @@ int main()
 
     // cout<<"rollno is :"<<s1.rollno<<endl;
     // cout<<"name is :"<<s1.name<<"\n";
-    s1.display();
+
+    // s1.input(); 
+
+    // cout<<"enter the  rollno : ";
+    // cin>>s1.rollno;
+    // cout<<"enter the  name : ";
+    // cin>>s1.name;
+    
+    s1.rollno=2; 
+    s1.name="taksh"; 
+    // s1.display();
+
+    cout<<"rollno is :"<<s1.rollno<<endl;
+    cout<<"name is :"<<s1.name<<"\n";
+
+
 
     return 0; 
 }
