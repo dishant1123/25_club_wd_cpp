@@ -79,3 +79,16 @@ int main()
 
     return 0; 
 }
+
+/*
+hw :
+switch  : 
+    1. addition 
+    2. subtraction 
+    3. multiplication
+    4. division
+    5. remainder
+    6. rev 
+    7. prime 
+
+*/
