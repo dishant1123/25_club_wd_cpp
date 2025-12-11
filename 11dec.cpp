@@ -2,7 +2,7 @@
 private :  with in class only. 
 
 */
-
+/*
 #include<iostream>
 using namespace std;
 class student 
@@ -28,6 +28,97 @@ int main()
     s1.show();
     // cout<<"rollno is :"<<s1.rollno<<endl;
     // cout<<"name is :"<<s1.name<<"\n";   // private  not  poss to access using object
+    return 0; 
+}
+*/ 
+/*
+constructor  : automatically called when object is created.
+
+1. class name ==constructor  name 
+2. no return type 
+
+type : 
+1. default constructor
+2. parameterized constructor
+3. non parameterized constructor
+
+*/
+
+//1 :
+/*
+#include<iostream>
+using namespace std;
+class person 
+{
+    public :
+    person()
+    {
+        cout<<"default constructor called\n";
+        cout<<"my name is raj"; 
+        cout<<"live in gandhinagar\n";
+    }
+};
+int main()
+{
+    person s1;
+    return 0; 
+}
+*/
+//2 :non parameterized constructor
+/*
+#include<iostream>
+using namespace std;
+class person 
+{
+    public :
+        string name; 
+        int age; 
+    person()
+    {
+        name ="raj";
+        age =19;
+        
+    }
+    void show()
+    {
+        cout<<"my name is "<<name<<"\n";
+        cout<<"age is "<<age<<"\n";
+    }
+};
+int main()
+{
+    person s1;
+    s1.show();
+    return 0; 
+}
+*/ 
+
+//3 :parameterized constructor
+
+#include<iostream>
+using namespace std;
+class person 
+{
+    public :
+        string name; 
+        int age; 
+    person(string n , int a )
+    {
+            name=n; 
+            age=a; 
+    }
+    void show()
+    {
+        cout<<"my name is "<<name<<"\n";
+        cout<<"age is "<<age<<"\n";
+    }
+};
+int main()
+{
+    person s1("raj",19);
+    person p2("taksh",20);
+    s1.show();
+    p2.show();
     return 0; 
 }
 
@@ -66,12 +157,12 @@ City 3 (Tier 3) → HRA = 0.10 × Basic Pay
 3.Annual Income = Gross Pay × 12
 
 4.
-| Annual Income           | Tax                                    |
+| Annual Income           | Tax                                    | 8 lpa 
 | ----------------------- | -------------------------------------- |
 | Up to ₹2,50,000         | 0%                                     |
-| ₹2,50,001 – ₹5,00,000   | 5% of (Income – 2,50,000)              |
-| ₹5,00,001 – ₹7,50,000   | 10% of (Income – 5,00,000) + 12,500    |
-| ₹7,50,001 – ₹10,00,000  | 15% of (Income – 7,50,000) + 37,500    |
+| ₹2,50,001 – ₹5,00,000   | 5% of (Income – 2,50,000)              |12500
+| ₹5,00,001 – ₹7,50,000   | 10% of (Income – 5,00,000) + 12,500    |25000 
+| ₹7,50,001 – ₹10,00,000  | 15% of (Income – 7,50,000) + 37,500    |7500  == > 45000
 | ₹10,00,001 – ₹12,50,000 | 20% of (Income – 10,00,000) + 75,000   |
 | ₹12,50,001 – ₹15,00,000 | 25% of (Income – 12,50,000) + 1,25,000 |
 | Above ₹15,00,001        | 30% of (Income – 15,00,000) + 1,87,500 |
