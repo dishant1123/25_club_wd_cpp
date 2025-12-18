@@ -66,7 +66,7 @@ class b : public a    ===> b ==> derived class
 */
 
 // single inheritance :
-
+/*
 #include<iostream>
 using namespace std;
 class a 
@@ -93,5 +93,39 @@ int main()
     b1.rollno =2; 
     b1.name ="pratham";
     b1.display();
+    return 0; 
+}
+*/
+
+// 
+#include<iostream>
+using namespace std;
+class a 
+{
+    private : 
+        int  rollno =1 ; 
+        string name ="naiti";
+    public : 
+        void  show()
+        {
+            cout<<"rollno is  :"<<rollno<<endl;
+            cout<<"name is  : "<<name<<endl;
+        }
+};
+class b : public a 
+{
+    public : 
+        void  display()
+        {
+          show();
+        }
+}; 
+int main()
+{
+    b b1; 
+    //b1.show(); /// a class 
+    b1.display();  // b  class 
+   
+    //b1.display();
     return 0; 
 }
