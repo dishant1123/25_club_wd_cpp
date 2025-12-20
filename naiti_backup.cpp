@@ -33,7 +33,7 @@ int main()
 int a@ =10 , int @a =90 , int A@A=78, int 12a =90   
 int __=89 , int a12 =78  
 */
-
+/*
 #include<iostream>
 using namespace std;
 int main()
@@ -45,7 +45,7 @@ int main()
 
     return 0; 
 }
-
+*/ 
 
 // operator : 
 
@@ -66,3 +66,52 @@ int main()
         20  +20 + 20 +20 +20  ==> 100  
 ans : 100 101   
 */
+
+/*
+
+public  : accessible from anywhere
+private  : with in the class 
+protected : accessible from the class and its derived class. 
+*/
+
+// public : 
+#include<iostream>
+using namespace std;
+class student 
+{
+    public :
+        int rollno; 
+        string name;
+    void input()
+    {
+        cout<<"enter rollno :";
+        cin>>rollno; 
+        cout<<"enter name :";
+        cin>>name;
+    }
+    void  show()
+    {
+        cout<<"rollno is  :"<<rollno<<endl;
+        cout<<"name is  :"<<name<<endl;
+    }
+};
+int main()
+{
+    student s1; 
+    //cout<<"rollno is  :"<<s1.rollno<<endl; 
+    //cout<<"name is  :"<<s1.name<<endl; // object  though  public data member  access . 
+    // cout<<"before changes :"<<endl;
+    // s1.show();
+
+    s1.rollno =100; 
+    s1.name="mahek"; 
+
+    // cout<<"after changes :"<<endl;
+    // //s1.show(); 
+    // cout<<"rollno is  :"<<s1.rollno<<endl;
+    // cout<<"name is  :"<<s1.name<<endl;
+    //s1.input(); 
+    s1.show(); 
+    return 0; 
+}
+
