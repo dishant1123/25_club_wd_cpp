@@ -75,24 +75,31 @@ protected : accessible from the class and its derived class.
 */
 
 // public : 
+/*
 #include<iostream>
 using namespace std;
 class student 
 {
     public :
-        int rollno; 
-        string name;
+        int rollno[3]; 
+        string name[3];
     void input()
     {
-        cout<<"enter rollno :";
-        cin>>rollno; 
-        cout<<"enter name :";
-        cin>>name;
+        for(int i=0; i<3; i++)
+        {
+            cout<<"enter rollno :";
+            cin>>rollno[i]; 
+            cout<<"enter name :";
+            cin>>name[i];
+        }
     }
     void  show()
     {
-        cout<<"rollno is  :"<<rollno<<endl;
-        cout<<"name is  :"<<name<<endl;
+        for(int i=0; i<3; i++)
+        {
+            cout<<"rollno is  :"<<rollno[i]<<endl;
+            cout<<"name is  :"<<name[i]<<endl;
+        }
     }
 };
 int main()
@@ -103,15 +110,40 @@ int main()
     // cout<<"before changes :"<<endl;
     // s1.show();
 
-    s1.rollno =100; 
-    s1.name="mahek"; 
+    //s1.rollno =100; 
+    //s1.name="mahek"; 
 
     // cout<<"after changes :"<<endl;
     // //s1.show(); 
     // cout<<"rollno is  :"<<s1.rollno<<endl;
     // cout<<"name is  :"<<s1.name<<endl;
     //s1.input(); 
+    s1.input();
     s1.show(); 
     return 0; 
 }
+*/
 
+// private  : 
+
+#include<iostream>
+using namespace std;
+class student 
+{
+    private :
+        int rollno =1 ;
+        string name ="mahek";
+    public :
+        void show()
+        {
+            cout<<"rollno is  :"<<rollno<<endl;
+            cout<<"name is  :"<<name<<endl;
+        }
+};
+int main()
+{
+    student s1; 
+    // cout<<"rollno is  :"<<s1.rollno<<endl;// not accessible bcz of private . 
+    s1.show(); 
+    return 0; 
+}
