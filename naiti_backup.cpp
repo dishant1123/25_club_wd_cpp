@@ -73,77 +73,54 @@ public  : accessible from anywhere
 private  : with in the class 
 protected : accessible from the class and its derived class. 
 */
-
-// public : 
 /*
 #include<iostream>
-using namespace std;
+using namespace std; 
 class student 
 {
     public :
-        int rollno[3]; 
-        string name[3];
-    void input()
-    {
-        for(int i=0; i<3; i++)
-        {
-            cout<<"enter rollno :";
-            cin>>rollno[i]; 
-            cout<<"enter name :";
-            cin>>name[i];
-        }
-    }
+        int rollno=1;  // rollno name   ==> public 
+        string name="harshit"; 
     void  show()
     {
-        for(int i=0; i<3; i++)
-        {
-            cout<<"rollno is  :"<<rollno[i]<<endl;
-            cout<<"name is  :"<<name[i]<<endl;
-        }
-    }
+        cout<<"rollno is  : "<<rollno<<"\n";
+        cout<<"name is  : "<<name<<"\n";
+    } 
 };
 int main()
 {
-    student s1; 
-    //cout<<"rollno is  :"<<s1.rollno<<endl; 
-    //cout<<"name is  :"<<s1.name<<endl; // object  though  public data member  access . 
-    // cout<<"before changes :"<<endl;
-    // s1.show();
+    student s1;  
+    // cout<<"rollno is  : "<<s1.rollno<<"\n";  // object though  print 
+    // cout<<"name is  : "<<s1.name<<"\n";
+    s1.show(); // fuun call 
+    
+    s1.rollno =100; 
+    s1.name ="parth";  // modify 
 
-    //s1.rollno =100; 
-    //s1.name="mahek"; 
-
-    // cout<<"after changes :"<<endl;
-    // //s1.show(); 
-    // cout<<"rollno is  :"<<s1.rollno<<endl;
-    // cout<<"name is  :"<<s1.name<<endl;
-    //s1.input(); 
-    s1.input();
-    s1.show(); 
+    s1.show();
     return 0; 
 }
 */
-
-// private  : 
-
 #include<iostream>
 using namespace std;
-class student 
+class person 
 {
     private :
-        int rollno =1 ;
-        string name ="mahek";
+        int rollno =1; 
+        string name="harshit";
     public :
         void show()
         {
-            cout<<"rollno is  :"<<rollno<<endl;
-            cout<<"name is  :"<<name<<endl;
+            cout<<"rollno is  : "<<rollno<<"\n";
+            cout<<"name is  : "<<name<<"\n";
         }
+
 };
 int main()
 {
-    student s1; 
-    // cout<<"rollno is  :"<<s1.rollno<<endl;// not accessible bcz of private . 
-    s1.show(); 
+    person p1; 
+    // cout<<"rollno is  : "<<p1.rollno<<"\n";
+    // cout<<"name is  : "<<p1.name<<"\n";   not accessible bcz of  private 
+    p1.show(); 
     return 0; 
 }
